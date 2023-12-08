@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Open+Sans:wght@400;600;700&family=Petrona:wght@500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .h1-bold {
+    @apply text-[8rem] leading-[120%] font-bold font-OpenSans;
+  }
+  .title-petrona-bold {
+    @apply text-[7rem] leading-[120%] font-bold font-Petrona;
+  }
+  .title-petrona-medium {
+    @apply text-[7rem] leading-[120%] font-medium font-Petrona;
+  }
+  .h2-semibold {
+    @apply text-[6rem] leading-[130%] font-semibold font-OpenSans;
+  }
+  .h3-bold {
+    @apply text-[4.8rem] leading-[140%] font-bold font-OpenSans;
+  }
+  .title-opensans {
+    @apply text-[4rem] leading-[140%] font-semibold font-OpenSans;
+  }
+  .h4-bold {
+    @apply text-[3.2rem] leading-[140%] font-bold font-OpenSans;
+  }
+  .subtitle-opensans-bold {
+    @apply text-[2.4rem] leading-[140%] font-bold font-OpenSans;
+  }
+  .subtitle-opensans-semibold {
+    @apply text-[2.4rem] leading-[140%] font-semibold font-OpenSans;
+  }
+  .h5-bold {
+    @apply text-[2.1rem] leading-[150%] font-bold font-OpenSans;
+  }
+  .intro {
+    @apply text-[1.8rem] leading-[150%] font-normal font-OpenSans;
+  }
+  .button-text {
+    @apply text-[1.8rem] leading-[150%] font-semibold font-Inter;
+  }
+  .paragraph {
+    @apply text-[1.6rem] leading-[150%] font-normal font-OpenSans;
+  }
+  .paragraph-medium {
+    @apply text-[1.6rem] leading-[150%] font-medium font-OpenSans;
+  }
+  .paragraph-bold {
+    @apply text-[1.6rem] leading-[150%] font-bold font-OpenSans;
+  }
+  .small-paragraph {
+    @apply text-[1.4rem] leading-[150%] font-normal font-OpenSans;
+  }
+  .mini-bold {
+    @apply text-[1.2rem] leading-[150%] font-bold font-OpenSans;
+  }
+}
