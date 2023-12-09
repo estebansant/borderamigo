@@ -4,15 +4,14 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,jsx,ts,tsx,mdx}",
   ],
   theme: {
-    screens: {
-      sm: "320px",
-      md: "768px",
-      lg: "1280px",
-      xl: "2560px",
-    },
     extend: {
+      screens: {
+        lg: "1280px",
+        xl: "2560px",
+      },
       colors: {
         // Color palette
         black: "#10151A",
@@ -23,6 +22,7 @@ module.exports = {
         "light-gray": "#F4F4F4",
         white: "#FFFFFF",
         "bew-gray": "#FCF0E5",
+        pink: "#FFF7F0",
         green: "#1D6A36",
       },
       fontFamily: {
@@ -59,5 +59,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 };

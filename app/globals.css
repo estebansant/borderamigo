@@ -24,6 +24,9 @@ body {
   .flex-end {
     @apply flex justify-end items-center;
   }
+  .flex-column {
+    @apply flex flex-col justify-center items-start;
+  }
 }
 
 .custom-scrollbar::-webkit-scrollbar {
