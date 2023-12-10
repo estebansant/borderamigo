@@ -40,6 +40,9 @@
   .button-text {
     @apply text-[1.8rem] leading-[150%] font-semibold font-Inter;
   }
+  .navbar {
+    @apply text-[1.7rem] leading-[150%] font-semibold font-OpenSans;
+  }
   .paragraph {
     @apply text-[1.6rem] leading-[150%] font-normal font-OpenSans;
   }
@@ -51,6 +54,9 @@
   }
   .small-paragraph {
     @apply text-[1.4rem] leading-[150%] font-normal font-OpenSans;
+  }
+  .small-paragraph-semibold {
+    @apply text-[1.4rem] leading-[150%] font-semibold font-OpenSans;
   }
   .mini-bold {
     @apply text-[1.2rem] leading-[150%] font-bold font-OpenSans;

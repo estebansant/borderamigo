@@ -23,6 +23,7 @@ module.exports = {
         white: "#FFFFFF",
         "bew-gray": "#FCF0E5",
         pink: "#FFF7F0",
+        "line-2": "#E9E1E1",
         green: "#1D6A36",
       },
       fontFamily: {

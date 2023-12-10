@@ -15,7 +15,10 @@ import {
 
 const MobileNavigation = () => {
   return (
-    <nav className="flex h-[64px] w-full items-center justify-end p-8">
+    <nav className="flex h-[64px] w-full items-center justify-between bg-transparent p-8">
+      <Link href="/">
+        <p className="button-text text-black">BorderAmigo</p>
+      </Link>
       <Sheet>
         <SheetTrigger asChild>
           <Image
@@ -27,32 +30,45 @@ const MobileNavigation = () => {
           />
         </SheetTrigger>
 
-        <SheetContent side="left" className="border-none bg-pink">
+        <SheetContent
+          side="left"
+          className="flex-column gap-[10%] border-none bg-pink"
+        >
           <Link href="/">
-            <h2>BorderAmigo</h2>
+            <p className="button-text text-black">BorderAmigo</p>
           </Link>
 
-          <div>
-            <SheetClose asChild>
-              <div className="">
-                {HeaderLinks.map((item, i) => {
-                  return (
-                    <Link href={item.link} key={i}>
-                      <p>{item.title}</p>
+          <div className="flex-between h-[95%] w-full flex-col">
+            <div className="flex-column-center h-auto w-full gap-[2rem]">
+              {HeaderLinks.map((item, i) => {
+                return (
+                  <SheetClose asChild key={i}>
+                    <Link href={item.link}>
+                      <p className="navbar text-gray">{item.title}</p>
                     </Link>
-                  );
-                })}
-              </div>
-            </SheetClose>
-            <div className="flex-column">
+                  </SheetClose>
+                );
+              })}
+            </div>
+
+            {/* Auth links */}
+            <div className="flex-column-center mb-6 h-auto w-full gap-6">
               <SheetClose>
-                <Link href="/log-in">
-                  <p>Login</p>
+                <Link
+                  href="/log-in"
+                  className="flex-center duration-[350ms] w-[225px] rounded-[55px] bg-line-2 px-5 py-[8px] transition-all ease-in-out hover:bg-bew-gray"
+                >
+                  <p className="small-paragraph-semibold text-black">Login</p>
                 </Link>
               </SheetClose>
               <SheetClose>
-                <Link href="/sign-up">
-                  <p>Get Started</p>
+                <Link
+                  href="/sign-up"
+                  className="flex-center duration-[350ms] w-[225px] rounded-[55px] bg-mint px-5 py-[8px] transition-all ease-in-out hover:bg-orange"
+                >
+                  <p className="small-paragraph-semibold text-white">
+                    Get Started
+                  </p>
                 </Link>
               </SheetClose>
             </div>
