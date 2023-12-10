@@ -15,7 +15,7 @@ import {
 
 const MobileNavigation = () => {
   return (
-    <nav className="flex h-[64px] w-full items-center justify-between bg-transparent p-8">
+    <nav className="flex h-[64px] w-full items-center justify-between border-[1px] border-solid border-line bg-pink p-8 sm:hidden">
       <Link href="/">
         <p className="button-text text-black">BorderAmigo</p>
       </Link>

@@ -4,7 +4,7 @@ import { MobileNavigation } from "./MobileNavigation";
 
 const Header = () => {
   return (
-    <header className="">
+    <header className="sticky top-0">
       <DesktopNavigation />
       <MobileNavigation />
     </header>
