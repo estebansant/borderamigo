@@ -64,6 +64,9 @@
   .small-paragraph-semibold {
     @apply text-[1.4rem] leading-[150%] font-semibold font-OpenSans;
   }
+  .small-paragraph-bold {
+    @apply text-[1.4rem] leading-[150%] font-bold font-OpenSans;
+  }
   .mini-bold {
     @apply text-[1.2rem] leading-[150%] font-bold font-OpenSans;
   }
