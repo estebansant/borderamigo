@@ -25,6 +25,7 @@ module.exports = {
         white: "#FFFFFF",
         "bew-gray": "#FCF0E5",
         pink: "#FFF7F0",
+        "dark-pink": "#FFE3C3",
         "line-2": "#E9E1E1",
         green: "#1D6A36",
       },
@@ -63,6 +64,9 @@ module.exports = {
       backgroundImage: {
         main: "url('/assets/background/main_bg.png')",
       },
+      backdropBlur: {
+        xs: '2px',
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],
