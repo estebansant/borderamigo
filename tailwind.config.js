@@ -63,6 +63,7 @@ module.exports = {
       },
       backgroundImage: {
         main: "url('/assets/background/main_bg.png')",
+        vectors: "url('/assets/background/how_it_works.png')"
       },
       backdropBlur: {
         xs: '2px',
