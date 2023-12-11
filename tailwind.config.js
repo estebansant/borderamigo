@@ -9,6 +9,8 @@ module.exports = {
   theme: {
     extend: {
       screens: {
+        avg: "768px",
+        md: "900px",
         lg: "1280px",
         xl: "2560px",
       },
@@ -57,6 +59,9 @@ module.exports = {
         md3: "3px 4px 6px 1px rgb(255 255 255 / 0.35)",
         lg: "6px 10px 15px -3px rgb(0 0 0 / 0.45)",
         xl: "9px 20px 25px -5px rgb(0 0 0 / 0.45)",
+      },
+      backgroundImage: {
+        main: "url('/assets/background/main_bg.png')",
       },
     },
   },

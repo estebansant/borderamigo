@@ -4,7 +4,7 @@ import { HeaderLinks } from "./../../constants/HeaderLinks";
 
 const DesktopNavigation = () => {
   return (
-    <nav className="md:flex-between fixed z-50 hidden w-full gap-5 border-[1px] border-solid border-line bg-pink p-6 dark:shadow-none sm:px-12">
+    <nav className="md:flex-between fixed z-50 hidden w-full max-w-[1280px] gap-5 p-6 dark:shadow-none sm:px-12">
       <div className="flex-center">
         <Link href="/">
           <p className="button-text text-black">BorderAmigo</p>

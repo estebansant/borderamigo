@@ -28,6 +28,9 @@
   .subtitle-opensans-bold {
     @apply text-[2.4rem] leading-[140%] font-bold font-OpenSans;
   }
+  .subtitle-petrona-bold {
+    @apply text-[2.4rem] leading-[140%] font-bold font-OpenSans;
+  }
   .subtitle-opensans-semibold {
     @apply text-[2.4rem] leading-[140%] font-semibold font-OpenSans;
   }
@@ -44,6 +47,9 @@
     @apply text-[1.7rem] leading-[150%] font-semibold font-OpenSans;
   }
   .paragraph {
+    @apply text-[1.6rem] leading-[150%] font-normal font-OpenSans;
+  }
+  .paragraph-petrona {
     @apply text-[1.6rem] leading-[150%] font-normal font-OpenSans;
   }
   .paragraph-medium {
