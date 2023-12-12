@@ -67,6 +67,7 @@ module.exports = {
         main: "url('/assets/background/main_bg.png')",
         vectors: "url('/assets/background/how_it_works.png')",
         whyUs: "url('/assets/background/why_us.png')",
+        startToday: "url('/assets/background/start_today.png')",
 
         // Why us images
         mb1: "url('/assets/images/mb1.png')",

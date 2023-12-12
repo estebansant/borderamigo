@@ -11,7 +11,7 @@
     @apply text-[3.6rem] lg:text-[6rem] leading-[120%] font-bold font-Petrona;
   }
   .title-petrona-medium {
-    @apply text-[3.6rem] lg:text-[6rem] leading-[120%] font-medium font-Petrona;
+    @apply text-[2.8rem] lg:text-[5.2rem] leading-[120%] font-semibold font-Petrona;
   }
   .h2-semibold {
     @apply text-[3.2rem] lg:text-[5.4rem] leading-[130%] font-semibold font-OpenSans;
@@ -38,7 +38,7 @@
     @apply text-[1.6rem] lg:text-[2rem] leading-[150%] font-bold font-OpenSans;
   }
   .intro {
-    @apply text-[1.4rem] lg:text-[1.6rem] leading-[150%] font-normal font-OpenSans;
+    @apply text-[1.4rem] lg:text-[1.8rem] leading-[150%] font-normal font-OpenSans;
   }
   .button-text {
     @apply text-[1.4rem] lg:text-[1.6rem] leading-[150%] font-semibold font-Inter;
