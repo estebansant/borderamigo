@@ -11,7 +11,7 @@ const BenefitsGrid = () => {
             key={i}
             className="flex-column-start gap-[16px] border-[1px] border-solid border-line bg-white p-[24px] backdrop-blur-xs"
           >
-            <Image src={card.image} alt={card.alt} />
+            <Image src={card.image} alt={card.alt} width={75} height={75} />
             <div className="flex-column-start gap-[8px]">
               <h4 className="paragraph-bold text-black">{card.title}</h4>
               <h5 className="paragraph text-gray">{card.subtitle}</h5>

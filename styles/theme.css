@@ -5,72 +5,72 @@
 
 @layer utilities {
   .h1-bold {
-    @apply text-[8rem] leading-[120%] font-bold font-OpenSans;
+    @apply text-[4rem] avg:text-[4.6rem] lg:text-[7rem] leading-[120%] font-bold font-OpenSans;
   }
   .title-petrona-bold {
-    @apply text-[7rem] leading-[120%] font-bold font-Petrona;
+    @apply text-[3.6rem] lg:text-[6rem] leading-[120%] font-bold font-Petrona;
   }
   .title-petrona-medium {
-    @apply text-[7rem] leading-[120%] font-medium font-Petrona;
+    @apply text-[3.6rem] lg:text-[6rem] leading-[120%] font-medium font-Petrona;
   }
   .h2-semibold {
-    @apply text-[6rem] leading-[130%] font-semibold font-OpenSans;
+    @apply text-[3.2rem] lg:text-[5.4rem] leading-[130%] font-semibold font-OpenSans;
   }
   .h3-bold {
-    @apply text-[4.8rem] leading-[140%] font-bold font-OpenSans;
+    @apply text-[2.8rem] lg:text-[4rem] leading-[140%] font-bold font-OpenSans;
   }
   .title-opensans {
-    @apply text-[4rem] leading-[140%] font-semibold font-OpenSans;
+    @apply text-[2.6rem] lg:text-[3.8rem] leading-[140%] font-semibold font-OpenSans;
   }
   .h4-bold {
-    @apply text-[3.2rem] leading-[140%] font-bold font-OpenSans;
+    @apply text-[2.8rem] leading-[140%] font-bold font-OpenSans;
   }
   .subtitle-opensans-bold {
-    @apply text-[2.4rem] leading-[140%] font-bold font-OpenSans;
+    @apply text-[2.2rem] leading-[140%] font-bold font-OpenSans;
   }
   .subtitle-petrona-bold {
-    @apply text-[2.4rem] leading-[140%] font-bold font-OpenSans;
+    @apply text-[2.2rem] leading-[140%] font-bold font-OpenSans;
   }
   .subtitle-opensans-semibold {
-    @apply text-[2.4rem] leading-[140%] font-semibold font-OpenSans;
+    @apply text-[2.2rem] leading-[140%] font-semibold font-OpenSans;
   }
   .h5-bold {
-    @apply text-[2.1rem] leading-[150%] font-bold font-OpenSans;
+    @apply text-[2rem] leading-[150%] font-bold font-OpenSans;
   }
   .intro {
-    @apply text-[1.8rem] leading-[150%] font-normal font-OpenSans;
+    @apply text-[1.4rem] lg:text-[1.6rem] leading-[150%] font-normal font-OpenSans;
   }
   .button-text {
-    @apply text-[1.8rem] leading-[150%] font-semibold font-Inter;
+    @apply text-[1.4rem] lg:text-[1.6rem] leading-[150%] font-semibold font-Inter;
   }
   .navbar {
-    @apply text-[1.7rem] leading-[150%] font-semibold font-OpenSans;
+    @apply text-[1.4rem] lg:text-[1.6rem] leading-[150%] font-semibold font-OpenSans;
   }
   .paragraph {
-    @apply text-[1.6rem] leading-[150%] font-normal font-OpenSans;
+    @apply text-[1.4rem] lg:text-[1.6rem] leading-[150%] font-normal font-OpenSans;
   }
   .paragraph-petrona {
-    @apply text-[1.6rem] leading-[150%] font-normal font-OpenSans;
+    @apply text-[1.4rem] lg:text-[1.6rem] leading-[150%] font-normal font-OpenSans;
   }
   .paragraph-medium {
-    @apply text-[1.6rem] leading-[150%] font-medium font-OpenSans;
+    @apply text-[1.4rem] lg:text-[1.6rem] leading-[150%] font-medium font-OpenSans;
   }
   .paragraph-bold {
-    @apply text-[1.6rem] leading-[150%] font-bold font-OpenSans;
+    @apply text-[1.4rem] lg:text-[1.6rem] leading-[150%] font-bold font-OpenSans;
   }
   .small-paragraph {
-    @apply text-[1.4rem] leading-[150%] font-normal font-OpenSans;
+    @apply text-[1.2rem] lg:text-[1.4rem] leading-[150%] font-normal font-OpenSans;
   }
   .small-paragraph-semibold {
-    @apply text-[1.4rem] leading-[150%] font-semibold font-OpenSans;
+    @apply text-[1.2rem] lg:text-[1.4rem] leading-[150%] font-semibold font-OpenSans;
   }
   .small-paragraph-bold {
-    @apply text-[1.4rem] leading-[150%] font-bold font-OpenSans;
+    @apply text-[1.2rem] lg:text-[1.4rem] leading-[150%] font-bold font-OpenSans;
   }
   .mini {
-    @apply text-[1.2rem] leading-[150%] font-normal font-OpenSans;
+    @apply text-[1rem] lg:text-[1.2rem] leading-[150%] font-normal font-OpenSans;
   }
   .mini-bold {
-    @apply text-[1.2rem] leading-[150%] font-bold font-OpenSans;
+    @apply text-[1rem] lg:text-[1.2rem] leading-[150%] font-bold font-OpenSans;
   }
 }
