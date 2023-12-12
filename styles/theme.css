@@ -35,7 +35,7 @@
     @apply text-[2.2rem] leading-[140%] font-semibold font-OpenSans;
   }
   .h5-bold {
-    @apply text-[2rem] leading-[150%] font-bold font-OpenSans;
+    @apply text-[1.6rem] lg:text-[2rem] leading-[150%] font-bold font-OpenSans;
   }
   .intro {
     @apply text-[1.4rem] lg:text-[1.6rem] leading-[150%] font-normal font-OpenSans;
