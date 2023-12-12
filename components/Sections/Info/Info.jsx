@@ -51,7 +51,7 @@ const Info = () => {
           </div>
         </div>
 
-        <card className="flex-column-start h-auto w-full gap-[58px] rounded-[24px] bg-white md:max-w-[440px] lg:max-w-[560px]">
+        <article className="flex-column-start h-auto w-full gap-[58px] rounded-[24px] bg-white md:max-w-[440px] lg:max-w-[560px]">
           <div className="flex-column-start gap-[16px] pl-[20px] pt-[20px]">
             <p className="small-paragraph-bold uppercase text-black">
               Welcome to
@@ -60,7 +60,7 @@ const Info = () => {
             <Image src={passport} alt="passport icon" width={36} height={36} />
           </div>
           <Image src={world} alt="world" className="h-auto w-full" />
-        </card>
+        </article>
       </div>
     </section>
   );
