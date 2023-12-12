@@ -12,6 +12,7 @@ const HowItWorks = () => {
       <h2 className="h3-bold text-center text-white">How it works?</h2>
       <div className="flex-center w-full max-w-[1280px]">
         <div className="flex-column-center w-full gap-[24px]">
+          {/* Did it this way for the position absolute not to cause trouble and have all numbers aligned on the middle of the page */}
           <Step1 />
           <Step2 />
           <Step3 />

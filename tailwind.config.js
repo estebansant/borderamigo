@@ -28,6 +28,8 @@ module.exports = {
         "dark-pink": "#FFE3C3",
         "line-2": "#E9E1E1",
         green: "#1D6A36",
+        linearGradient:
+          "linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 81.9%)",
       },
       fontFamily: {
         Petrona: ["Petrona", "sans-serif"],
@@ -63,11 +65,28 @@ module.exports = {
       },
       backgroundImage: {
         main: "url('/assets/background/main_bg.png')",
-        vectors: "url('/assets/background/how_it_works.png')"
+        vectors: "url('/assets/background/how_it_works.png')",
+        whyUs: "url('/assets/background/why_us.png')",
+
+        // Why us images
+        mb1: "url('/assets/images/mb1.png')",
+        mb2: "url('/assets/images/mb2.png')",
+        mb3: "url('/assets/images/mb3.png')",
+        mb4: "url('/assets/images/mb4.png')",
+        mb5: "url('/assets/images/mb5.png')",
+        mb6: "url('/assets/images/mb6.png')",
+
+        // Why us images on hover
+        mb1Hover: "url('/assets/images/mb1Hover.png')",
+        mb2Hover: "url('/assets/images/mb2Hover.png')",
+        mb3Hover: "url('/assets/images/mb3Hover.png')",
+        mb4Hover: "url('/assets/images/mb4Hover.png')",
+        mb5Hover: "url('/assets/images/mb5Hover.png')",
+        mb6Hover: "url('/assets/images/mb6Hover.png')",
       },
       backdropBlur: {
-        xs: '2px',
-      }
+        xs: "2px",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
