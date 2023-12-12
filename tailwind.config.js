@@ -56,7 +56,7 @@ module.exports = {
         full: "50%",
       },
       boxShadow: {
-        sm: "0 2px 4px 0 rgb(0 0 0 / 0.45)",
+        sm: "0 8px 12px 6 rgb(0 0 0 / 0.15)",
         md: "3px 4px 6px 1px rgb(0 0 0 / 0.45)",
         md2: "0 4px 6px 1px rgb(0 0 0 / 0.35)",
         md3: "3px 4px 6px 1px rgb(255 255 255 / 0.35)",
@@ -101,6 +101,9 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      transitionDuration: {
+        6000: "6000ms",
       },
     },
   },

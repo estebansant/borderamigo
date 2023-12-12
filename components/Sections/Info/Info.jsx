@@ -8,7 +8,7 @@ import { BasicRequirements } from "@/constants/BasicRequirements";
 const Info = () => {
   return (
     <section className="flex-center relative h-fit w-full bg-pink px-[16px] pb-[88px]">
-      <div className="mt-[250px] flex h-auto w-full max-w-[1280px] flex-col items-center justify-center gap-[50px] avg:mt-[150px] md:flex-row md:gap-[50px] lg:mt-[180px]">
+      <div className="mt-[250px] flex h-auto w-full max-w-[1200px] flex-col items-center justify-center gap-[50px] avg:mt-[150px] md:flex-row md:gap-[50px] lg:mt-[180px]">
         <div className="flex-column-start w-full gap-[40px] md:max-w-[440px] lg:max-w-[560px]">
           <h2 className="title-opensans text-black">
             The easiest pathway to a European residence and citizenship.

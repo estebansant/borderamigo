@@ -10,7 +10,7 @@ const HowItWorks = () => {
   return (
     <section className="flex-column-center relative h-fit w-full gap-[76px] bg-black bg-vectors bg-cover bg-center bg-no-repeat px-[16px] pb-[182px] pt-[100px]">
       <h2 className="h3-bold text-center text-white">How it works?</h2>
-      <div className="flex-center w-full max-w-[1280px]">
+      <div className="flex-center w-full max-w-[1200px]">
         <div className="flex-column-center w-full gap-[24px]">
           {/* Did it this way for the position absolute not to cause trouble and have all numbers aligned on the middle of the page */}
           <Step1 />

@@ -70,6 +70,9 @@
   .mini {
     @apply text-[1rem] lg:text-[1.2rem] leading-[150%] font-normal font-OpenSans;
   }
+  .mini-semibold {
+    @apply text-[1rem] lg:text-[1.2rem] leading-[150%] font-semibold font-OpenSans;
+  }
   .mini-bold {
     @apply text-[1rem] lg:text-[1.2rem] leading-[150%] font-bold font-OpenSans;
   }

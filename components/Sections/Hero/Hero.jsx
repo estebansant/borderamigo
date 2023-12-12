@@ -9,7 +9,7 @@ import Link from "next/link";
 const Hero = () => {
   return (
     <section className="flex-center relative h-fit w-full bg-bew-gray bg-main bg-cover bg-center bg-no-repeat px-[16px]">
-      <div className="mb-[250px] flex h-auto w-full max-w-[1280px] flex-col-reverse avg:mb-[150px] avg:flex-row avg:items-center avg:justify-around lg:mb-[180px]">
+      <div className="mb-[250px] flex h-auto w-full max-w-[1200px] flex-col-reverse avg:mb-[150px] avg:flex-row avg:items-center avg:justify-around lg:mb-[180px]">
         <Image
           src={passport}
           alt="passport"
