@@ -1,3 +1,4 @@
+import Head from "next/head";
 import "./globals.css";
 
 export const metadata = {
@@ -35,6 +36,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Head>
+        <script
+          defer
+          type="text/javascript"
+          src="https://api.pirsch.io/pirsch.js"
+          id="pirschjs"
+          data-code="bF57uKAnMD2b4rHBJLdcV6lpmDQkZmdo"
+        ></script>
+      </Head>
       <body>{children}</body>
     </html>
   );
