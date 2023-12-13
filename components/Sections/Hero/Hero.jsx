@@ -39,18 +39,22 @@ const Hero = () => {
               </p>
             </div>
 
-            <Button
-              className="flex-center h-fit gap-[10px] rounded-[55px] bg-mint px-[15px] py-[8px] hover:bg-orange md:px-[30px] md:py-[12px]"
-              asChild
-            >
-              <Link className="flex-center gap-[10px]" href="#pricing">
-                <p className="button-text text-white">Get Started</p>
-                <Image
-                  src={chevron}
-                  alt="chevron right"
-                  width={20}
-                  height={20}
-                />
+            <Button className="rounded-[55px] p-[4px]" asChild>
+              <Link
+                className="flex-center h-fit gap-[10px] rounded-[55px] border-[1px] border-solid border-mint-300 p-[4px]"
+                href="#pricing"
+              >
+                <div className="flex-center gap-[10px] rounded-[55px] bg-mint px-[15px] py-[8px] opacity-100 hover:bg-orange md:px-[30px] md:py-[12px]">
+                  <p className="button-text text-white opacity-100">
+                    Get Started
+                  </p>
+                  <Image
+                    src={chevron}
+                    alt="chevron right"
+                    width={20}
+                    height={20}
+                  />
+                </div>
               </Link>
             </Button>
           </div>

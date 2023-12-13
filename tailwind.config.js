@@ -30,6 +30,7 @@ module.exports = {
         green: "#1D6A36",
         linearGradient:
           "linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 81.9%)",
+        "mint-300": "#EC6407",
       },
       fontFamily: {
         Petrona: ["Petrona", "sans-serif"],

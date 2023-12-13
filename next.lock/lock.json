@@ -1,0 +1,5 @@
+{
+  "https://cdn.skypack.dev/-/dat.gui@v0.7.9-2wtQAdFH5SRwnJLDWGNz/dist=es2019,mode=imports/optimized/dat.gui.js": { "integrity": "sha512-W9a7wfKgHJnJ+lXluupWc3VoHEYu+cVpGJJo6JdrOiUbDkbCPo3F59IamQYSPZPo5o01zqh1eYIIOSLaTnHRxA==", "contentType": "application/javascript; charset=utf-8" },
+  "https://cdn.skypack.dev/dat.gui": { "integrity": "sha512-8VSNGOfCErvWP3sEVMHWcuXqRX1FJoLVuNIxaoe/s6PzpmG6LmVz5kNK3CA8Xc0S6Bsoxd0Kd1UdqQzkvbIEzg==", "contentType": "application/javascript; charset=utf-8" },
+  "version": 1
+}

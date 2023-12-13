@@ -1,9 +1,11 @@
+"use client";
+
 import React from "react";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import Image from "next/image";
 import check from "@/public/assets/icons/check.svg";
 import { Card1Data } from "@/constants/CardsPricing";
+import { PopUpModal } from "./PopUpModal";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 const Card1 = () => {
   return (
@@ -30,12 +32,14 @@ const Card1 = () => {
                 <p className="mini text-gray">{card.vat}</p>
               </div>
 
-              <Button
-                asChild
-                className="flex-center button-text duration-[400ms] h-[52px] w-full max-w-[352px] rounded-[55px] border-[1px] border-solid border-mint bg-white px-[30px] py-[12px] text-mint transition-all ease-in-out hover:bg-mint hover:text-white"
-              >
-                <Link href={card.link}>Get Started</Link>
-              </Button>
+              <Dialog>
+                <DialogTrigger className="flex-center button-text duration-[400ms] h-[52px] w-full max-w-[352px] rounded-[55px] border-[1px] border-solid border-mint bg-white px-[30px] py-[12px] text-mint transition-all ease-in-out hover:bg-mint hover:text-white">
+                  Get Started
+                </DialogTrigger>
+                <DialogContent>
+                  <PopUpModal />
+                </DialogContent>
+              </Dialog>
             </div>
 
             <div className="flex-column-start gap-[18px]">
