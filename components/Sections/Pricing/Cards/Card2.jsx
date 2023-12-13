@@ -40,7 +40,7 @@ const Card2 = () => {
                     Get Started
                   </div>
                 </DialogTrigger>
-                <DialogContent className="flex-column-start h-[590px] w-[90%] rounded-[16px] bg-white p-[20px] avg:w-[400px] md:h-[640px]">
+                <DialogContent className="flex-column-start h-[590px] w-[90%] rounded-[16px] bg-white p-[20px] avg:w-[400px] avg:min-w-[400px] md:h-[640px]">
                   <PopUpModal />
                 </DialogContent>
               </Dialog>

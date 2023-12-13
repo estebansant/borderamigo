@@ -36,7 +36,7 @@ const Card1 = () => {
                 <DialogTrigger className="flex-center button-text h-[52px] w-full max-w-[352px] rounded-[55px] border-[1px] border-solid border-mint bg-white px-[30px] py-[12px] text-mint transition-all duration-300 ease-in-out hover:bg-mint hover:text-white">
                   Get Started
                 </DialogTrigger>
-                <DialogContent className="flex-column-start h-[590px] w-[90%] rounded-[16px] bg-white p-[20px] avg:w-[400px] md:h-[640px]">
+                <DialogContent className="flex-column-start h-[590px] w-[90%] rounded-[16px] bg-white p-[20px] avg:w-[400px] avg:min-w-[400px] md:h-[640px]">
                   <PopUpModal />
                 </DialogContent>
               </Dialog>

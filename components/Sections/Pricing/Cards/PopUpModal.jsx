@@ -14,6 +14,18 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import Link from "next/link";
 
 const PopUpModal = () => {
+  const [tab, setTab] = React.useState("register");
+
+  const onTabChange = (value) => {
+    setTab(value);
+  };
+
+  const [plan, setPlan] = React.useState("");
+
+  const onPlanChange = (value) => {
+    setPlan(value);
+  };
+
   return (
     <React.Fragment>
       <DialogHeader className="flex-column-start h-fit w-fit">
@@ -29,58 +41,87 @@ const PopUpModal = () => {
 
       <Tabs
         defaultValue="register"
-        className="flex-column-start w-full gap-[8px]"
+        value={tab}
+        onValueChange={onTabChange}
+        className="flex-column-start h-full min-h-full w-full gap-[8px]"
       >
-        <TabsList className=" h-fit w-fit gap-[16px]">
-          <TabsTrigger value="register" className="p-0 focus:underline">
-            <p className="h5-bold text-black">Register</p>
+        <TabsList className="h-fit w-fit bg-line transition-all duration-300">
+          <TabsTrigger
+            value="register"
+            style={{
+              backgroundColor: tab === "register" ? "#F8771E" : "#F4F3F3",
+            }}
+            className="px-[12px] transition-all duration-300"
+          >
+            <p
+              style={{ color: tab === "register" ? "#FFFFFF" : "#10151A" }}
+              className="h5-bold"
+            >
+              Register
+            </p>
           </TabsTrigger>
-          <TabsTrigger value="login" className="p-0 focus:underline">
-            <p className="h5-bold text-black">Login</p>
+          <TabsTrigger
+            value="login"
+            style={{
+              backgroundColor: tab === "login" ? "#F8771E" : "#F4F3F3",
+            }}
+            className="px-[12px] transition-all duration-300"
+          >
+            <p
+              style={{ color: tab === "login" ? "#FFFFFF" : "#10151A" }}
+              className="h5-bold"
+            >
+              Login
+            </p>
           </TabsTrigger>
         </TabsList>
 
         <TabsContent
           value="login"
-          className="flex-column-start w-full gap-[16px]"
+          className="flex w-full flex-col items-start justify-between"
         >
-          <div className="flex-column-start w-[265px] max-w-sm items-center gap-[8px]">
-            <Label htmlFor="email">
-              <span className="button-text text-black">Email</span>
-            </Label>
-            <Input
-              type="email"
-              id="email"
-              placeholder="Email"
-              className="h-[32px] w-[265px] rounded-[6px] border-none bg-line shadow-md2 placeholder:text-gray focus:border-[1px] focus:border-solid focus:border-mint focus:ring-0 focus:ring-transparent"
-            />
+          <div className="flex-column-start w-full min-w-full gap-[16px]">
+            <div className="flex-column-start w-full items-center gap-[8px] avg:w-[85%]">
+              <Label htmlFor="email">
+                <span className="button-text text-black">Email</span>
+              </Label>
+              <Input
+                type="email"
+                id="email"
+                placeholder="Email"
+                className="h-[32px] w-full min-w-full rounded-[6px] border-solid border-gray bg-white placeholder:text-gray focus:ring-mint"
+              />
+            </div>
+            <div className="flex-column-start w-full items-center gap-[8px] avg:w-[85%]">
+              <Label htmlFor="password">
+                <span className="button-text text-black">Password</span>
+              </Label>
+              <Input
+                type="password"
+                id="password"
+                placeholder="********"
+                className="h-[32px] w-full min-w-full rounded-[6px] border-[1px] border-solid border-gray bg-white placeholder:text-gray focus:ring-mint"
+              />
+            </div>
           </div>
-          <div className="flex-column-start w-[265px] max-w-sm items-center gap-[8px]">
-            <Label htmlFor="password">
-              <span className="button-text text-black">Password</span>
-            </Label>
-            <Input
-              type="password"
-              id="password"
-              placeholder="********"
-              className="h-[32px] w-[265px] rounded-[6px] border-none bg-line shadow-md2 placeholder:text-gray focus:border-[1px] focus:border-solid focus:border-mint focus:ring-0 focus:ring-transparent"
-            />
+
+          <div className="flex-center mt-[45px] w-full min-w-full">
+            <Button asChild className="flex-center w-[265px]">
+              <Link
+                href="/"
+                className="h5-bold intro-bold h-[44px] bg-mint text-white hover:bg-orange"
+              >
+                Login
+              </Link>
+            </Button>
           </div>
-          <Button asChild className="flex-center mt-[12px] w-[265px]">
-            <Link
-              href="/"
-              className="h5-bold intro-bold h-[44px] bg-mint text-white hover:bg-orange"
-            >
-              Login
-            </Link>
-          </Button>
         </TabsContent>
 
         <TabsContent
           value="register"
           className="flex-column-start w-full gap-[16px]"
         >
-          <div className="flex-column-start w-full max-w-sm items-center gap-[8px]">
+          <div className="flex-column-start button-text w-full items-center gap-[8px] avg:w-[85%]">
             <Label htmlFor="name">
               <span className="button-text text-black">Name</span>
             </Label>
@@ -88,10 +129,10 @@ const PopUpModal = () => {
               type="text"
               id="name"
               placeholder="Name"
-              className="h-[32px] w-[265px] rounded-[6px] border-none bg-line shadow-md2 placeholder:text-gray focus:border-[1px] focus:border-solid focus:border-mint focus:ring-0 focus:ring-transparent"
+              className="h-[32px] w-full min-w-full rounded-[6px] border-[1px] border-solid border-gray bg-white placeholder:text-gray focus:ring-mint"
             />
           </div>
-          <div className="flex-column-start w-full max-w-sm items-center gap-[4px]">
+          <div className="flex-column-start w-full items-center gap-[4px] avg:w-[85%]">
             <Label htmlFor="phone">
               <span className="button-text text-black">Phone number</span>
             </Label>
@@ -99,10 +140,10 @@ const PopUpModal = () => {
               type="tel"
               id="phone"
               placeholder="Phone"
-              className="h-[32px] w-[265px] rounded-[6px] border-none bg-line shadow-md2 placeholder:text-gray focus:border-[1px] focus:border-solid focus:border-mint focus:ring-0 focus:ring-transparent"
+              className="h-[32px] w-full min-w-full rounded-[6px] border-[1px] border-solid border-gray bg-white placeholder:text-gray focus:ring-mint"
             />
           </div>
-          <div className="flex-column-start w-full max-w-sm items-center gap-[4px]">
+          <div className="flex-column-start w-full items-center gap-[4px] avg:w-[85%]">
             <Label htmlFor="email">
               <span className="button-text text-black">Email</span>
             </Label>
@@ -110,10 +151,10 @@ const PopUpModal = () => {
               type="email"
               id="email"
               placeholder="Email"
-              className="h-[32px] w-[265px] rounded-[6px] border-none bg-line shadow-md2 placeholder:text-gray focus:border-[1px] focus:border-solid focus:border-mint focus:ring-0 focus:ring-transparent"
+              className="h-[32px] w-full min-w-full rounded-[6px] border-[1px] border-solid border-gray bg-white placeholder:text-gray focus:ring-mint"
             />
           </div>
-          <div className="flex-column-start w-full max-w-sm items-center gap-[4px]">
+          <div className="flex-column-start w-full items-center gap-[4px] avg:w-[85%]">
             <Label htmlFor="password">
               <span className="button-text text-black">Password</span>
             </Label>
@@ -121,21 +162,43 @@ const PopUpModal = () => {
               type="password"
               id="password"
               placeholder="********"
-              className="h-[32px] w-[265px] rounded-[6px] border-none bg-line shadow-md2 placeholder:text-gray focus:border-[1px] focus:border-solid focus:border-mint focus:ring-0 focus:ring-transparent"
+              className="h-[32px] w-full min-w-full rounded-[6px] border-[1px] border-solid border-gray bg-white placeholder:text-gray focus:ring-mint"
             />
           </div>
-          <ToggleGroup type="single" className="mt-[12px] w-full">
+
+          <ToggleGroup
+            value={plan}
+            onValueChange={onPlanChange}
+            type="single"
+            className="mt-[12px] w-full gap-[16px]"
+          >
             <ToggleGroupItem
               value="A"
-              className="h-[45px] w-[90px] bg-line focus:bg-dark-pink"
+              style={{
+                backgroundColor: plan === "A" ? "#F8771E" : "#FFFFFF",
+              }}
+              className="h-[45px] w-[90px] rounded-[55px] border-[2px] border-solid border-mint bg-line transition-all duration-300"
             >
-              <span className="button-text text-black">€599</span>
+              <span
+                style={{ color: plan === "A" ? "#FFFFFF" : "#F8771E" }}
+                className="button-text"
+              >
+                €599
+              </span>
             </ToggleGroupItem>
             <ToggleGroupItem
               value="B"
-              className="h-[45px] w-[90px] bg-line focus:bg-dark-pink"
+              style={{
+                backgroundColor: plan === "B" ? "#F8771E" : "#FFFFFF",
+              }}
+              className="h-[45px] w-[90px] rounded-[55px] border-[2px] border-solid border-mint bg-line transition-all duration-300"
             >
-              <span className="button-text text-black">€1399</span>
+              <span
+                style={{ color: plan === "B" ? "#FFFFFF" : "#F8771E" }}
+                className="button-text"
+              >
+                €1399
+              </span>
             </ToggleGroupItem>
           </ToggleGroup>
           <Button asChild className="flex-center mt-[12px] w-full">
