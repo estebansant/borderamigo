@@ -234,12 +234,8 @@ const PopUpModal = () => {
                 checkout({
                   lineItems: [
                     {
-                      price:
-                        plan === "A"
-                          ? "price_1OMhk5GfaGGBNJ6SOtvFhyQl"
-                          : plan === "B"
-                            ? "price_1OMhlDGfaGGBNJ6StzVFMDP6"
-                            : null,
+                      price: "price_1OMhk5GfaGGBNJ6SOtvFhyQl",
+
                       quantity: 1,
                     },
                   ],

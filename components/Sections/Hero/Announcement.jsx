@@ -17,7 +17,10 @@ const Announcement = () => {
         professionals from non-EU nations to reside in Spain, whether briefly or
         for long durations. It also presents a pathway to permanent resident
         status after 5 years and to citizenship after a decade.{" "}
-        <Link href="/" className="paragraph-petrona text-mint hover:underline">
+        <Link
+          href="https://www.exteriores.gob.es/Consulados/londres/en/ServiciosConsulares/Paginas/Consular/Digital-Nomad-Visa.aspx"
+          className="paragraph-petrona text-mint hover:underline"
+        >
           See the circular
         </Link>
       </p>
