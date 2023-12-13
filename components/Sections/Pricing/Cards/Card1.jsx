@@ -33,10 +33,10 @@ const Card1 = () => {
               </div>
 
               <Dialog>
-                <DialogTrigger className="flex-center button-text duration-[400ms] h-[52px] w-full max-w-[352px] rounded-[55px] border-[1px] border-solid border-mint bg-white px-[30px] py-[12px] text-mint transition-all ease-in-out hover:bg-mint hover:text-white">
+                <DialogTrigger className="flex-center button-text h-[52px] w-full max-w-[352px] rounded-[55px] border-[1px] border-solid border-mint bg-white px-[30px] py-[12px] text-mint transition-all duration-300 ease-in-out hover:bg-mint hover:text-white">
                   Get Started
                 </DialogTrigger>
-                <DialogContent>
+                <DialogContent className="flex-column-start h-[590px] w-[90%] rounded-[16px] bg-white p-[20px] avg:w-[400px] md:h-[640px]">
                   <PopUpModal />
                 </DialogContent>
               </Dialog>

@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import { PopUpModal } from "./PopUpModal";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import Image from "next/image";
 import check from "@/public/assets/icons/check.svg";
 import { Card2Data } from "@/constants/CardsPricing";
@@ -14,7 +14,7 @@ const Card2 = () => {
         return (
           <article
             key={i}
-            className="flex-column-start w-[95%] max-w-[410px] gap-[40px] rounded-[24px] bg-white p-[24px]"
+            className="flex-column-start h-full w-[95%] max-w-[410px] gap-[40px] rounded-[24px] bg-white p-[24px] avg:h-[620px]"
           >
             <div className="flex-column-start gap-[8px]">
               <h5 className="h5-bold text-black">{card.title}</h5>
@@ -34,12 +34,16 @@ const Card2 = () => {
                 <p className="mini text-gray">{card.vat}</p>
               </div>
 
-              <Button
-                asChild
-                className="flex-center button-text duration-[400ms] h-[52px] w-full max-w-[352px] rounded-[55px] border-[1px] border-solid border-mint bg-mint px-[30px] py-[12px] text-white transition-all ease-in-out hover:bg-orange hover:text-white"
-              >
-                <Link href={card.link}>Get Started</Link>
-              </Button>
+              <Dialog>
+                <DialogTrigger className="flex-center button-text h-[60px] w-full max-w-[352px] rounded-[55px] border-none text-white transition-all duration-300 ease-in-out hover:border-[1px] hover:border-solid hover:border-mint hover:p-[4px]">
+                  <div className="flex-center h-[52px] w-full rounded-[55px] bg-mint px-[30px] py-[12px] hover:bg-orange hover:text-white">
+                    Get Started
+                  </div>
+                </DialogTrigger>
+                <DialogContent className="flex-column-start h-[590px] w-[90%] rounded-[16px] bg-white p-[20px] avg:w-[400px] md:h-[640px]">
+                  <PopUpModal />
+                </DialogContent>
+              </Dialog>
             </div>
 
             <div className="flex-column-start gap-[18px]">

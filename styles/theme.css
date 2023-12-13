@@ -23,7 +23,7 @@
     @apply text-[2.6rem] lg:text-[3.8rem] leading-[140%] font-semibold font-OpenSans;
   }
   .h4-bold {
-    @apply text-[2.8rem] leading-[140%] font-bold font-OpenSans;
+    @apply text-[2.4rem] leading-[140%] font-bold font-OpenSans;
   }
   .subtitle-opensans-bold {
     @apply text-[2.2rem] leading-[140%] font-bold font-OpenSans;
@@ -39,6 +39,9 @@
   }
   .intro {
     @apply text-[1.4rem] lg:text-[1.8rem] leading-[150%] font-normal font-OpenSans;
+  }
+  .intro-semibold {
+    @apply text-[1.4rem] lg:text-[1.8rem] leading-[150%] font-semibold font-OpenSans;
   }
   .intro-bold {
     @apply text-[1.4rem] lg:text-[1.8rem] leading-[150%] font-bold font-OpenSans;
