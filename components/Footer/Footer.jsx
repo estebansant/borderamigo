@@ -80,7 +80,7 @@ const Footer = () => {
       <div className="flex-between w-full">
         <div className="flex-center">
           <p className="paragraph md:intro text-center text-black">
-            ® Visa Pulse · 2023
+            ® 2023 · VisaPulse by DigitalNomadVisa Spain
           </p>
         </div>
         <div className="flex-center gap-6">
