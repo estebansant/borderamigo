@@ -2,40 +2,30 @@
 
 import Slider from "react-slick";
 import { PopularCitiesCards } from "../../../constants/PopularCitiesCards";
+import prevArrow from "@/public/assets/icons/arrow_prev_active.svg";
+import nextArrow from "@/public/assets/icons/arrow_next_active.svg";
 import Image from "next/image";
 import Link from "next/link";
-
-function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "red" }}
-      onClick={onClick}
-    />
-  );
-}
-
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "green" }}
-      onClick={onClick}
-    />
-  );
-}
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const SliderCities = () => {
+  const SlickArrowPrev = ({ currentSlide, slideCount, ...props }) => (
+    <Image src={prevArrow} alt="prevArrow" {...props} />
+  );
+
+  const SlickArrowNext = ({ currentSlide, slideCount, ...props }) => (
+    <Image src={nextArrow} alt="nextArrow" {...props} />
+  );
+
   const settings = {
     dots: false,
     infinite: false,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    prevArrow: <SlickArrowPrev />,
+    nextArrow: <SlickArrowNext />,
     responsive: [
       {
         breakpoint: 1024,
@@ -44,7 +34,7 @@ const SliderCities = () => {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 860,
         settings: {
           slidesToShow: 2,
         },
@@ -58,22 +48,22 @@ const SliderCities = () => {
     ],
   };
   return (
-    <div className="w-full max-w-[1200px]">
-      <Slider {...settings}>
+    <div className="flex-center w-full max-w-[1200px]">
+      <Slider
+        {...settings}
+        className="w-[90%] border-none pl-[45px] focus:border-none avg:pl-[70px] md:pl-[50px] lg:w-full"
+      >
         {PopularCitiesCards.map((card) => {
           return (
-            <div
-              key={card.id}
-              className="max-w-[240px] avg:max-w-[280px] lg:max-w-[358px]"
-            >
+            <div key={card.id} className="border-none focus:border-none">
               <Link
                 href={card.link}
-                className="flex-column-start h-fit w-auto max-w-[240px] gap-[16px] avg:max-w-[280px] lg:max-w-[358px]"
+                className="flex-column-start h-fit w-auto max-w-[210px] gap-[16px] border-none focus:border-none avg:max-w-[200px] lg:max-w-[340px]"
               >
                 <Image
                   src={card.image}
                   alt={card.alt}
-                  className="h-auto max-h-[408px] w-auto max-w-[240px] avg:max-w-[280px] lg:max-w-[358px]"
+                  className="h-auto max-h-[408px] w-auto max-w-[210px] avg:max-w-[250px] lg:max-w-[340px]"
                 />
                 <h6 className="intro-bold text-black">{card.title}</h6>
               </Link>

@@ -5,7 +5,7 @@ const PopularCities = () => {
   return (
     <section className="flex-column-center h-fit w-full gap-[40px] bg-pink px-[16px] py-[100px]">
       <h2 className="h3-bold text-center text-black">
-        Popular cities in Spain for remote workers{" "}
+        Popular cities in Spain for remote workers
       </h2>
       <SliderCities />
     </section>

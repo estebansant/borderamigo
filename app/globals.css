@@ -11,25 +11,34 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 .slick-disabled {
-  display: none;
+  opacity: 0.4;
 }
-.slick-next {
-  background-image: url("/public/assets/icons/arrow_next_active.svg");
-  background-size: cover;
-  background-positions: center;
-  background-repeat: no-repeat;
-  width: 40px;
-  height: 40px;
+.slick-slide {
+  border: none;
 }
+.slick-slide:focus {
+  border: none;
+}
+.slick-next,
 .slick-prev {
-  background-image: url("/public/assets/icons/arrow_prev_active.svg");
+  width: 40px !important;
+  height: 40px !important;
+  cursor: pointer;
+  border: none;
+  border-radius: 100%;
+  background-color: transaprent;
+  z-index: 10 !important;
   background-size: cover;
   background-positions: center;
   background-repeat: no-repeat;
-  width: 40px;
-  height: 40px;
 }
-
+@media (min-width: 768px) {
+  .slick-next,
+  .slick-prev {
+    width: 50px !important;
+    height: 50px !important;
+  }
+}
 @layer utilities {
   .flex-center {
     @apply flex justify-center items-center;
