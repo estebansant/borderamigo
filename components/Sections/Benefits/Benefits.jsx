@@ -3,7 +3,10 @@ import { BenefitsGrid } from "./BenefitsGrid";
 
 const Benefits = () => {
   return (
-    <section className="flex-column-center relative h-fit w-full gap-[40px] bg-dark-pink px-[16px] py-[100px]">
+    <section
+      id="benefits"
+      className="flex-column-center relative h-fit w-full gap-[40px] bg-dark-pink px-[16px] py-[100px]"
+    >
       <div className="flex-column-center max-w-[748px] gap-[20px]">
         <h2 className="h3-bold text-center text-black">
           Benefits of the Spanish Digital Nomad Visa

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const BenefitsGrid = () => {
   return (
-    <div className="grid auto-cols-auto auto-rows-auto gap-y-[11.5px] avg:grid-cols-2 md:grid-cols-3 md:grid-rows-3">
+    <div className="grid auto-cols-auto auto-rows-auto avg:grid-cols-2 md:grid-cols-3 md:grid-rows-3">
       {BenefitsCards.map((card, i) => {
         return (
           <div

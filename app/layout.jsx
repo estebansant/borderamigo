@@ -1,10 +1,9 @@
 import "./globals.css";
 
-
 export const metadata = {
-  title: "BorderAmigo",
+  title: "Visa Pulse | Get Digital Nomad Visa for Spain Seamlessly",
   description:
-    "We pave the way to streamline and fast track your digital nomad residence in Spain. We handle the tedious details so you can enjoy more tapas, siestas and sunshine in Spain.",
+    "Want Spain's new remote worker visa? DigitalNomadVisa.io helps qualified nomads get approved with complete how-to guides, resources and application services for stress-free Spain residency.",
 };
 
 export default function RootLayout({ children }) {
