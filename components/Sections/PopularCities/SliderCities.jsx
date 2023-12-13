@@ -51,21 +51,23 @@ const SliderCities = () => {
     <div className="flex-center w-full max-w-[1200px]">
       <Slider
         {...settings}
-        className="w-[90%] border-none pl-[45px] focus:border-none avg:pl-[70px] md:pl-[50px] lg:w-full"
+        className="w-[90%] border-none pl-[45px] focus:border-none avg:pl-[75px] md:pl-[50px] lg:w-full"
       >
         {PopularCitiesCards.map((card) => {
           return (
             <div key={card.id} className="border-none focus:border-none">
               <Link
                 href={card.link}
-                className="flex-column-start h-fit w-auto max-w-[210px] gap-[16px] border-none focus:border-none avg:max-w-[200px] lg:max-w-[340px]"
+                className="flex-column-center h-fit w-auto max-w-[210px] gap-[16px] border-none focus:border-none avg:max-w-[250px] lg:max-w-[340px]"
               >
                 <Image
                   src={card.image}
                   alt={card.alt}
                   className="h-auto max-h-[408px] w-auto max-w-[210px] avg:max-w-[250px] lg:max-w-[340px]"
                 />
-                <h6 className="intro-bold text-black">{card.title}</h6>
+                <h6 className="intro-bold text-center text-black">
+                  {card.title}
+                </h6>
               </Link>
             </div>
           );

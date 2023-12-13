@@ -13,8 +13,8 @@ const BenefitsGrid = () => {
           >
             <Image src={card.image} alt={card.alt} width={75} height={75} />
             <div className="flex-column-start gap-[8px]">
-              <h4 className="paragraph-bold text-black">{card.title}</h4>
-              <h5 className="paragraph text-gray">{card.subtitle}</h5>
+              <h6 className="paragraph-bold text-black">{card.title}</h6>
+              <p className="paragraph text-gray">{card.subtitle}</p>
             </div>
             <p className="paragraph max-w-[332px] text-black">{card.text}</p>
           </div>

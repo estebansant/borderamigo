@@ -15,9 +15,9 @@ const IdealFor = () => {
             >
               <Image src={card.image} alt={card.alt} width={316} height={162} />
               <div className="flex-column-start gap-[16px]">
-                <h4 className="h5-bold max-w-[318px] text-black md:h-[64px]">
+                <h5 className="h5-bold max-w-[318px] text-black md:h-[64px]">
                   {card.title}
-                </h4>
+                </h5>
                 <p className="small-paragraph max-w-[318px] text-black">
                   {card.text}
                 </p>

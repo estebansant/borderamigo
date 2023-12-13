@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { FaqItems } from "@/constants/FaqItems";
 
 import {
   Accordion,
@@ -21,66 +24,22 @@ const FAQ = () => {
         collapsible
         className="flex-column-start w-full max-w-[804px] gap-[16px]"
       >
-        <AccordionItem
-          value="item-1"
-          className="w-full gap-[10px] rounded-[16px] border-none bg-white px-[24px] py-[16px]"
-        >
-          <AccordionTrigger className="paragraph min-w-full border-b-[1px] border-solid border-line text-gray">
-            Lorem Ipsum is simply dummy text of the.
-          </AccordionTrigger>
-          <AccordionContent className="small-paragraph mt-[10px] text-gray">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry&#39;s standard.Lorem
-            Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been the industry&#39;s standard.Lorem Ipsum is
-            simply dummy text of the printing and typesetting industry.
-          </AccordionContent>
-        </AccordionItem>
-        <AccordionItem
-          value="item-2"
-          className="w-full gap-[10px] rounded-[16px] border-none bg-white px-[24px] py-[16px]"
-        >
-          <AccordionTrigger className="paragraph min-w-full border-b-[1px] border-solid border-line text-gray">
-            Lorem Ipsum is simply dummy text of the.
-          </AccordionTrigger>
-          <AccordionContent className="small-paragraph mt-[10px] text-gray">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry&#39;s standard.Lorem
-            Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been the industry&#39;s standard.Lorem Ipsum is
-            simply dummy text of the printing and typesetting industry.
-          </AccordionContent>
-        </AccordionItem>
-        <AccordionItem
-          value="item-3"
-          className="w-full gap-[10px] rounded-[16px] border-none bg-white px-[24px] py-[16px]"
-        >
-          <AccordionTrigger className="paragraph min-w-full border-b-[1px] border-solid border-line text-gray">
-            Lorem Ipsum is simply dummy text of the.
-          </AccordionTrigger>
-          <AccordionContent className="small-paragraph mt-[10px] text-gray">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry&#39;s standard.Lorem
-            Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been the industry&#39;s standard.Lorem Ipsum is
-            simply dummy text of the printing and typesetting industry.
-          </AccordionContent>
-        </AccordionItem>
-        <AccordionItem
-          value="item-4"
-          className="w-full gap-[10px] rounded-[16px] border-none bg-white px-[24px] py-[16px]"
-        >
-          <AccordionTrigger className="paragraph min-w-full border-b-[1px] border-solid border-line text-gray">
-            Lorem Ipsum is simply dummy text of the.
-          </AccordionTrigger>
-          <AccordionContent className="small-paragraph mt-[10px] text-gray">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry&#39;s standard.Lorem
-            Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been the industry&#39;s standard.Lorem Ipsum is
-            simply dummy text of the printing and typesetting industry.
-          </AccordionContent>
-        </AccordionItem>
+        {FaqItems.map((item, i) => {
+          return (
+            <AccordionItem
+              value={item.value}
+              key={i}
+              className="w-full gap-[10px] rounded-[16px] border-none bg-white px-[24px] py-[16px]"
+            >
+              <AccordionTrigger className="paragraph min-w-full border-b-[1px] border-solid border-line text-left text-gray">
+                {item.title}
+              </AccordionTrigger>
+              <AccordionContent className="small-paragraph mt-[10px] text-gray">
+                {item.name}
+              </AccordionContent>
+            </AccordionItem>
+          );
+        })}
       </Accordion>
     </section>
   );

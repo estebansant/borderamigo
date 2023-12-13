@@ -39,7 +39,9 @@ export default function PrivacyPolicy() {
 
         <div>
           <h2 className="h5-bold text-black">How We Use Your Information</h2>
-          <p>We use the information we collect for the following purposes:</p>
+          <p className="paragraph text-justify text-black">
+            We use the information we collect for the following purposes:
+          </p>
           <ul>
             <li className="paragraph text-justify text-black">
               To respond to your inquiries submitted through the contact form.

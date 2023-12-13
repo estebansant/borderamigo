@@ -56,7 +56,7 @@ const Info = () => {
             <p className="small-paragraph-bold uppercase text-black">
               Welcome to
             </p>
-            <h4 className="h5-bold text-black">Spanish Digital Nomad Visa</h4>
+            <h6 className="h5-bold text-black">Spanish Digital Nomad Visa</h6>
             <Image src={passport} alt="passport icon" width={36} height={36} />
           </div>
           <Image src={world} alt="world" className="h-auto w-full" />
