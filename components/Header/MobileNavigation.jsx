@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import logo from "@/public/assets/icons/logo.svg";
+import logo from "@/public/assets/icons/logo.png";
 import { HeaderLinks } from "./../../constants/HeaderLinks";
 import Image from "next/image";
 import hamburguerMenu from "./../../public/assets/icons/hamburguer_menu.svg";
@@ -15,12 +15,12 @@ import {
 
 const MobileNavigation = () => {
   return (
-    <nav className="flex h-[64px] w-full items-center justify-between border-[1px] border-solid border-line bg-pink p-8 md:hidden">
+    <nav className="z-50 flex h-[64px] w-full items-center justify-between border-[1px] border-solid border-line p-8 md:hidden">
       <Link href="/">
         <Image
           src={logo}
           alt="visa pulse"
-          className="ml-[-10px] h-[60px] w-[160px]"
+          className="ml-[-10px] h-[60px] w-[180px]"
         />
       </Link>
 

@@ -10,9 +10,9 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="flex-center relative h-fit w-full bg-bew-gray bg-main bg-cover bg-center bg-no-repeat px-[16px]"
+      className="flex-center relative z-10 mt-[-64px] h-fit w-full bg-bew-gray bg-main bg-cover bg-center bg-no-repeat px-[16px]"
     >
-      <div className="mb-[150px] flex h-auto w-full max-w-[1200px] flex-col items-center avg:mb-[150px] avg:flex-row avg:justify-around lg:mb-[180px]">
+      <div className="mb-[160px] mt-[64px] flex h-auto w-full max-w-[1200px] flex-col items-center avg:mb-[150px] avg:flex-row avg:justify-around lg:mb-[180px]">
         <Image
           src={passport}
           alt="passport"

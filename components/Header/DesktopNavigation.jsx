@@ -1,15 +1,15 @@
 import React from "react";
 import Link from "next/link";
 import { HeaderLinks } from "./../../constants/HeaderLinks";
-import logo from "@/public/assets/icons/logo.svg";
+import logo from "@/public/assets/icons/logo.png";
 import Image from "next/image";
 
 const DesktopNavigation = () => {
   return (
-    <nav className="md:flex-between fixed z-50 hidden w-full max-w-[1280px] gap-5 p-6 dark:shadow-none sm:px-12">
+    <nav className="md:flex-between z-50 hidden w-full max-w-[1280px] gap-5 p-6 dark:shadow-none sm:px-12">
       <div className="flex-center">
         <Link href="/">
-          <Image src={logo} alt="visa pulse" />
+          <Image src={logo} alt="visa pulse" className="h-[60px] w-[180px]" />
         </Link>
       </div>
       <div className="flex-center gap-10">

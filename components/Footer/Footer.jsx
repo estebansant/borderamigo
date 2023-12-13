@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="flex-column-start md:flex-between w-full gap-12 md:flex-row">
         <div className="flex-column-start max-w-[390px] gap-6">
           <Image src={logo} alt="visa pulse" className="ml-[-15px]" />
-          <p className="paragraph md:intro text-black">
+          <p className="small-paragraph text-mint">
             We pave the way to streamline and fast track your digital nomad
             residence in Spain. We handle the tedious details so you can enjoy
             more tapas, siestas and sunshine in Spain.

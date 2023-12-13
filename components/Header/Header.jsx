@@ -4,7 +4,7 @@ import { MobileNavigation } from "./MobileNavigation";
 
 const Header = () => {
   return (
-    <header className="sticky top-0 z-50 flex h-[64px] w-full flex-col items-center justify-center border-b-[1px] border-solid border-line bg-pink">
+    <header className="top-0 z-50 flex h-[64px] w-full flex-col items-center justify-center border-b-[1px] border-solid border-line bg-bew-gray">
       <DesktopNavigation />
       <MobileNavigation />
     </header>
