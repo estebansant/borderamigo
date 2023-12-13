@@ -8,8 +8,11 @@ import React from "react";
 
 const Blog = () => {
   return (
-    <section className="flex-center h-fit w-full bg-pink px-[16px] py-[100px]">
-      <div className="flex-column-start w-full max-w-[1200px] gap-[45px] avg:flex-row avg:justify-around">
+    <section
+      id="blog"
+      className="flex-center h-fit w-full bg-pink px-[16px] py-[100px]"
+    >
+      <div className="flex-column-center w-full max-w-[1200px] gap-[45px] avg:flex-row avg:justify-around">
         <div className="flex-column-start gap-[40px]">
           <div className="flex-column-start max-w-[278px] gap-[20px]">
             <div className="flex-center gap-[20px]">

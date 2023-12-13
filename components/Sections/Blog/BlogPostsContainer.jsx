@@ -14,13 +14,16 @@ const BlogPostsContainer = () => {
           >
             <Link
               href={card.link}
-              className="flex-column-start w-full gap-[24px]"
+              className="flex-column-start w-full gap-[24px] rounded-[16px]"
             >
-              <Image
-                src={card.image}
-                alt={card.alt}
-                className="h-auto max-h-[240px] w-full transition-all duration-6000 ease-in-out hover:scale-105"
-              />
+              <div className="flex-center max-h-[240px] max-w-[358px] overflow-hidden rounded-[16px]">
+                <Image
+                  src={card.image}
+                  alt={card.alt}
+                  className="h-auto max-h-[240px] w-full transition-all duration-6000 ease-in-out hover:scale-105"
+                />
+              </div>
+
               <div className="flex-column-start w-full max-w-[358px] gap-[16px]">
                 <div className="flex-column-start w-full gap-[8px]">
                   <div className="flex-between w-full">

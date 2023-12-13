@@ -10,6 +10,25 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
 }
+.slick-disabled {
+  display: none;
+}
+.slick-next {
+  background-image: url("/public/assets/icons/arrow_next_active.svg");
+  background-size: cover;
+  background-positions: center;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+}
+.slick-prev {
+  background-image: url("/public/assets/icons/arrow_prev_active.svg");
+  background-size: cover;
+  background-positions: center;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+}
 
 @layer utilities {
   .flex-center {

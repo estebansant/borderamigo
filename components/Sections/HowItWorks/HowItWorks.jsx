@@ -8,7 +8,10 @@ import { Step6 } from "./Step6";
 
 const HowItWorks = () => {
   return (
-    <section className="flex-column-center relative h-fit w-full gap-[76px] bg-black bg-vectors bg-cover bg-center bg-no-repeat px-[16px] pb-[182px] pt-[100px]">
+    <section
+      id="how-it-works"
+      className="flex-column-center relative h-fit w-full gap-[76px] bg-black bg-vectors bg-cover bg-center bg-no-repeat px-[16px] pb-[182px] pt-[100px]"
+    >
       <h2 className="h3-bold text-center text-white">How it works?</h2>
       <div className="flex-center w-full max-w-[1200px]">
         <div className="flex-column-center w-full gap-[24px]">

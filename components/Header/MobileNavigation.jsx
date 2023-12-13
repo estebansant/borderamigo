@@ -50,7 +50,7 @@ const MobileNavigation = () => {
                 <p className="small-paragraph-semibold text-black">Login</p>
               </Link>
               <Link
-                href="/sign-up"
+                href="#pricing"
                 className="flex-center duration-[350ms] w-[90%] rounded-[55px] bg-mint px-5 py-[8px] transition-all ease-in-out hover:bg-orange"
               >
                 <p className="small-paragraph-semibold text-white">

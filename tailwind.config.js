@@ -84,6 +84,9 @@ module.exports = {
         mb4Hover: "url('/assets/images/mb4Hover.png')",
         mb5Hover: "url('/assets/images/mb5Hover.png')",
         mb6Hover: "url('/assets/images/mb6Hover.png')",
+
+        prevArrow: "url('/assets/icons/arrow_prev_active.svg')",
+        nextArrow: "url('/assets/icons/arrow_next_active.svg')",
       },
       backdropBlur: {
         xs: "2px",

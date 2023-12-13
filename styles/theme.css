@@ -32,13 +32,16 @@
     @apply text-[2.2rem] leading-[140%] font-bold font-OpenSans;
   }
   .subtitle-opensans-semibold {
-    @apply text-[2.2rem] leading-[140%] font-semibold font-OpenSans;
+    @apply text-[1.6rem] leading-[140%] font-semibold font-OpenSans;
   }
   .h5-bold {
     @apply text-[1.6rem] lg:text-[2rem] leading-[150%] font-bold font-OpenSans;
   }
   .intro {
     @apply text-[1.4rem] lg:text-[1.8rem] leading-[150%] font-normal font-OpenSans;
+  }
+  .intro-bold {
+    @apply text-[1.4rem] lg:text-[1.8rem] leading-[150%] font-bold font-OpenSans;
   }
   .button-text {
     @apply text-[1.4rem] lg:text-[1.6rem] leading-[150%] font-semibold font-Inter;
@@ -50,7 +53,7 @@
     @apply text-[1.4rem] lg:text-[1.6rem] leading-[150%] font-normal font-OpenSans;
   }
   .paragraph-petrona {
-    @apply text-[1.4rem] lg:text-[1.6rem] leading-[150%] font-normal font-OpenSans;
+    @apply text-[1.2rem] lg:text-[1.6rem] leading-[150%] font-normal font-OpenSans;
   }
   .paragraph-medium {
     @apply text-[1.4rem] lg:text-[1.6rem] leading-[150%] font-medium font-OpenSans;

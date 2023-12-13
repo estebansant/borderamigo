@@ -5,7 +5,7 @@ import announcement from "@/public/assets/icons/announcement.svg";
 
 const Announcement = () => {
   return (
-    <div className="flex-column-center absolute bottom-[-180px] z-10 w-[92.5%] max-w-[1280px] rounded-[30px] border-[1px] border-solid border-mint bg-white p-[16px] avg:bottom-[-100px] avg:p-[20px] md:p-[32px]">
+    <div className="flex-column-center absolute bottom-[-120px] z-10 w-[92.5%] max-w-[1280px] rounded-[30px] border-[1px] border-solid border-mint bg-white p-[16px] avg:bottom-[-100px] avg:p-[20px] md:p-[32px]">
       <div className="flex-start mb-[20px] w-full gap-[16px]">
         <Image src={announcement} alt="announcement" width={32} height={32} />
         <h3 className="subtitle-petrona-bold text-mint">Announcement</h3>
