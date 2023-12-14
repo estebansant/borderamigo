@@ -14,20 +14,20 @@ export const metadata = {
     type: "website",
   },
   icons: {
-    icon: "/public/favicon.ico",
-    shortcut: "/public/favicon.ico",
+    icon: "/app/favicon.ico",
+    shortcut: "/app/favicon.ico",
     other: [
       {
         rel: "icon",
         sizes: "32x32",
         type: "image/png",
-        url: "/public/favicon-32x32.png",
+        url: "/app/favicon-32x32.png",
       },
       {
         rel: "icon",
         sizes: "16x16",
         type: "image/png",
-        url: "/public/favicon-16x16.png",
+        url: "/app/favicon-16x16.png",
       },
     ],
   },
