@@ -1,7 +1,7 @@
 export const HeaderLinks = [
   {
     title: "Home",
-    link: "#home",
+    link: "/",
   },
   {
     title: "How it works",

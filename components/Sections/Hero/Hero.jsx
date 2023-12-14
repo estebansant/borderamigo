@@ -16,7 +16,7 @@ const Hero = () => {
         <Image
           src={passport}
           alt="passport"
-          className="h-[300px] w-[265px] md:h-[475px] md:w-[435px] lg:h-[680px] lg:w-[662.5px]"
+          className="h-[272.09px] w-[265px] md:h-[446.63px] md:w-[435px] lg:h-[680.21px] lg:w-[662.5px]"
         />
         <div className="flex-column-center avg:flex-column-start mt-[40px] max-w-[560px] gap-[30px]">
           <h1 className="text-center font-Petrona text-[4.2rem] font-medium leading-[120%] text-black avg:text-left md:text-[5.6rem] lg:text-[7rem]">

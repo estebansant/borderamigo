@@ -65,11 +65,6 @@ module.exports = {
         xl: "9px 20px 25px -5px rgb(0 0 0 / 0.45)",
       },
       backgroundImage: {
-        main: "url('/assets/background/main_bg.png')",
-        vectors: "url('/assets/background/how_it_works.png')",
-        whyUs: "url('/assets/background/why_us.png')",
-        startToday: "url('/assets/background/start_today.png')",
-
         // Why us images
         mb1: "url('/assets/images/mb1.png')",
         mb2: "url('/assets/images/mb2.png')",
