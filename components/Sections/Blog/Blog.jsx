@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { BlogPostsContainer } from "./BlogPostsContainer";
+// import { Test } from "@/pages/Index";
 import chevron from "@/public/assets/icons/chevron_right_orange.svg";
 import star from "@/public/assets/icons/blog_star.svg";
 import Image from "next/image";
@@ -36,6 +37,7 @@ const Blog = () => {
           </Button>
         </div>
 
+        {/* <Test /> */}
         <BlogPostsContainer />
       </div>
     </section>

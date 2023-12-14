@@ -9,10 +9,9 @@ const api = new GhostContentAPI({
 export async function getPosts() {
   return await api.posts
     .browse({
-      include: ["tags"],
-      limit: 3,
+      limit: "all",
     })
-    .catch((err) => {
-      throw new Error(err);
+    .catch((e) => {
+      console.error(e);
     });
 }

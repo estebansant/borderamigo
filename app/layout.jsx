@@ -9,8 +9,15 @@ export const metadata = {
     title: "Visa Pulse",
     description: "Get your Digital Nomad Visa for Spain Seamlessly",
     // Add URL to the actual working website
-    url: "https://nextjs.org",
-    images: "/app/(root)/(home)/opengraph-image.jpg",
+    url: "https://www.digitalnomadvisa.io/",
+    images: "/app/opengraph-image.jpg",
+    type: "website",
+  },
+  twitter: {
+    title: "Visa Pulse",
+    description: "Get your Digital Nomad Visa for Spain Seamlessly",
+    image: "/app/opengraph-image.jpg",
+    url: "https://www.digitalnomadvisa.io/",
     type: "website",
   },
   icons: {
