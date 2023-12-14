@@ -7,7 +7,7 @@ import { Card1Data } from "@/constants/CardsPricing";
 import { PopUpModal } from "./PopUpModal";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
-const Card1 = () => {
+const Card1 = ({ change, plan }) => {
   return (
     <React.Fragment>
       {Card1Data.map((card, i) => {
@@ -33,11 +33,14 @@ const Card1 = () => {
               </div>
 
               <Dialog>
-                <DialogTrigger className="flex-center button-text h-[52px] w-full max-w-[352px] rounded-[55px] border-[1px] border-solid border-mint bg-white px-[30px] py-[12px] text-mint transition-all duration-300 ease-in-out hover:bg-mint hover:text-white">
+                <DialogTrigger
+                  onClick={() => change("A")}
+                  className="flex-center button-text h-[52px] w-full max-w-[352px] rounded-[55px] border-[1px] border-solid border-mint bg-white px-[30px] py-[12px] text-mint transition-all duration-300 ease-in-out hover:bg-mint hover:text-white"
+                >
                   Get Started
                 </DialogTrigger>
-                <DialogContent className="flex-column-start h-[590px] w-[90%] rounded-[16px] bg-white p-[20px] avg:w-[400px] avg:min-w-[400px] md:h-[640px]">
-                  <PopUpModal />
+                <DialogContent className="flex-column-start h-[590px] w-[90%] overflow-scroll rounded-[16px] bg-white p-[20px] avg:w-[460px] avg:min-w-[460px] avg:overflow-hidden md:h-[640px]">
+                  <PopUpModal change={change} plan={plan} />
                 </DialogContent>
               </Dialog>
             </div>

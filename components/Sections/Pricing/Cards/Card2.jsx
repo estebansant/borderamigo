@@ -7,7 +7,7 @@ import Image from "next/image";
 import check from "@/public/assets/icons/check.svg";
 import { Card2Data } from "@/constants/CardsPricing";
 
-const Card2 = () => {
+const Card2 = ({ change, plan }) => {
   return (
     <React.Fragment>
       {Card2Data.map((card, i) => {
@@ -35,13 +35,16 @@ const Card2 = () => {
               </div>
 
               <Dialog>
-                <DialogTrigger className="flex-center button-text h-[60px] w-full max-w-[352px] rounded-[55px] border-none text-white transition-all duration-300 ease-in-out hover:border-[1px] hover:border-solid hover:border-mint hover:p-[4px]">
+                <DialogTrigger
+                  onClick={() => change("B")}
+                  className="flex-center button-text h-[60px] w-full max-w-[352px] rounded-[55px] border-none text-white transition-all duration-300 ease-in-out hover:border-[1px] hover:border-solid hover:border-mint hover:p-[4px]"
+                >
                   <div className="flex-center h-[52px] w-full rounded-[55px] bg-mint px-[30px] py-[12px] hover:bg-orange hover:text-white">
                     Get Started
                   </div>
                 </DialogTrigger>
-                <DialogContent className="flex-column-start h-[590px] w-[90%] rounded-[16px] bg-white p-[20px] avg:w-[400px] avg:min-w-[400px] md:h-[640px]">
-                  <PopUpModal />
+                <DialogContent className="flex-column-start h-[590px] w-[90%] overflow-scroll rounded-[16px] bg-white p-[20px] avg:h-[640px] avg:w-[460px] avg:min-w-[460px] avg:overflow-hidden">
+                  <PopUpModal change={change} plan={plan} />
                 </DialogContent>
               </Dialog>
             </div>
