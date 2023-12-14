@@ -142,7 +142,8 @@ const PopUpModal = ({ change, plan }) => {
           <form
             className="flex-column-start w-full gap-[16px]"
             onSubmit={onSubmit}
-            s
+            action="/app/api/checkout_sessions.js"
+            method="POST"
           >
             <div className="flex-column-start button-text w-full items-center gap-[8px] ">
               <Input
@@ -236,7 +237,7 @@ const PopUpModal = ({ change, plan }) => {
               className="flex-center mt-[4px] w-full"
             >
               <div className="intro-bold mb-[20px] h-[44px] bg-black text-white transition-all duration-300 hover:cursor-pointer hover:bg-mint avg:mb-0">
-                Register
+                Get Started
               </div>
             </Button>
           </form>
