@@ -10,11 +10,8 @@ import { PopularCities } from "@/components/Sections/PopularCities/PopularCities
 import { Pricing } from "@/components/Sections/Pricing/Pricing";
 import { StartToday } from "@/components/Sections/StartToday/StartToday";
 import { WhyUs } from "@/components/Sections/WhyUs/WhyUs";
-import { getPosts } from "@/app/posts";
 
 export default async function Home() {
-  const blogPosts = await getPosts();
-  console.log({ blogPosts });
   return (
     <React.Fragment>
       <Hero />
