@@ -19,6 +19,7 @@
     "@radix-ui/react-toggle-group": "^1.0.4",
     "@stripe/stripe-js": "^2.2.1",
     "@tryghost/content-api": "^1.11.20",
+    "axios": "^1.6.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "eslint-config-prettier": "^9.1.0",
@@ -31,6 +32,7 @@
     "react-dom": "^18",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
+    "stripe": "^14.9.0",
     "tailwind-merge": "^2.1.0",
     "tailwindcss-animate": "^1.0.7"
   },

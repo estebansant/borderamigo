@@ -2,7 +2,7 @@
 import React from "react";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { checkout } from "../../../../checkout";
+import { checkout } from "@/checkout";
 import { Input } from "@/components/ui/input";
 import {
   DialogDescription,
@@ -16,6 +16,7 @@ import logo from "@/public/assets/icons/logo_icon.png";
 import Image from "next/image";
 
 const PopUpModal = ({ change, plan }) => {
+  // Handle form
   async function onSubmit(event) {
     event.preventDefault();
 
@@ -142,7 +143,8 @@ const PopUpModal = ({ change, plan }) => {
           <form
             className="flex-column-start w-full gap-[16px]"
             onSubmit={onSubmit}
-            s
+            action="./../../../../app/api/checkout_sessions.js"
+            method="POST"
           >
             <div className="flex-column-start button-text w-full items-center gap-[8px] ">
               <Input
