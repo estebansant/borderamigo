@@ -2,6 +2,7 @@
 
 import React from "react";
 import { FaqItems } from "@/constants/FaqItems";
+import { motion } from "framer-motion";
 
 import {
   Accordion,
@@ -11,14 +12,35 @@ import {
 } from "@/components/ui/accordion";
 
 const FAQ = () => {
+  const downVar = {
+    offscreen: {
+      y: "-3vh",
+      opacity: 0,
+    },
+    onscreen: {
+      y: 0,
+      scale: 1,
+      opacity: 1,
+      transition: {
+        duration: 0.7,
+        ease: "easeInOut",
+      },
+    },
+  };
   return (
     <section
       id="faqs"
       className="flex-column-center relative h-fit w-full gap-[45px] bg-pink px-[16px] py-[100px]"
     >
-      <h2 className="h3-bold text-center text-black">
+      <motion.h2
+        variants={downVar}
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, delay: 0.2, amount: 0.4 }}
+        className="h3-bold text-center text-black"
+      >
         Frequently asked questions (FAQ)
-      </h2>
+      </motion.h2>
       <Accordion
         type="single"
         collapsible
@@ -26,18 +48,26 @@ const FAQ = () => {
       >
         {FaqItems.map((item, i) => {
           return (
-            <AccordionItem
-              value={item.value}
+            <motion.div
               key={i}
-              className="w-full gap-[10px] rounded-[16px] border-none bg-white px-[24px] py-[16px]"
+              variants={downVar}
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, delay: 0.2, amount: 0.6 }}
+              className="w-full"
             >
-              <AccordionTrigger className="paragraph min-w-full border-b-[1px] border-solid border-line text-left text-gray">
-                {item.title}
-              </AccordionTrigger>
-              <AccordionContent className="small-paragraph mt-[10px] text-gray">
-                {item.name}
-              </AccordionContent>
-            </AccordionItem>
+              <AccordionItem
+                value={item.value}
+                className="w-full gap-[10px] rounded-[16px] border-none bg-white px-[24px] py-[16px]"
+              >
+                <AccordionTrigger className="paragraph min-w-full border-b-[1px] border-solid border-line text-left text-gray">
+                  {item.title}
+                </AccordionTrigger>
+                <AccordionContent className="small-paragraph mt-[10px] text-gray">
+                  {item.name}
+                </AccordionContent>
+              </AccordionItem>
+            </motion.div>
           );
         })}
       </Accordion>

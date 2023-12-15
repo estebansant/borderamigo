@@ -6,13 +6,33 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import Image from "next/image";
 import check from "@/public/assets/icons/check.svg";
 import { Card2Data } from "@/constants/CardsPricing";
+import { motion } from "framer-motion";
 
 const Card2 = ({ change, plan }) => {
+  const leftVar = {
+    offscreen: {
+      x: "3vh",
+      opacity: 0,
+    },
+    onscreen: {
+      x: 0,
+      scale: 1,
+      opacity: 1,
+      transition: {
+        duration: 0.7,
+        ease: "easeInOut",
+      },
+    },
+  };
   return (
     <React.Fragment>
       {Card2Data.map((card, i) => {
         return (
-          <article
+          <motion.article
+            variants={leftVar}
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, delay: 0.2, amount: 0.4 }}
             key={i}
             className="flex-column-start h-full w-[95%] max-w-[410px] gap-[40px] rounded-[24px] bg-white p-[24px] avg:h-[620px]"
           >
@@ -67,7 +87,7 @@ const Card2 = ({ change, plan }) => {
                 );
               })}
             </div>
-          </article>
+          </motion.article>
         );
       })}
     </React.Fragment>

@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { BlogPostsContainer } from "./BlogPostsContainer";
 import chevron from "@/public/assets/icons/chevron_right_orange.svg";
@@ -5,15 +6,37 @@ import star from "@/public/assets/icons/blog_star.svg";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 
 const Blog = () => {
+  const rightVar = {
+    offscreen: {
+      x: "-3vh",
+      opacity: 0,
+    },
+    onscreen: {
+      x: 0,
+      scale: 1,
+      opacity: 1,
+      transition: {
+        duration: 0.7,
+        ease: "easeInOut",
+      },
+    },
+  };
   return (
     <section
       id="blog"
       className="flex-center h-fit w-full bg-pink px-[16px] py-[50px] md:py-[100px]"
     >
       <div className="flex-column-center w-full max-w-[1200px] gap-[45px] avg:flex-row avg:items-start avg:justify-around">
-        <div className="flex-column-start gap-[40px]">
+        <motion.div
+          variants={rightVar}
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, delay: 0.2, amount: 0.6 }}
+          className="flex-column-start gap-[40px]"
+        >
           <div className="flex-column-start max-w-[278px] gap-[20px]">
             <div className="flex-center gap-[20px]">
               <Image src={star} alt="north star icon" width={60} height={60} />
@@ -34,7 +57,7 @@ const Blog = () => {
               <Image src={chevron} alt="chevron right" width={16} height={16} />
             </Link>
           </Button>
-        </div>
+        </motion.div>
 
         <BlogPostsContainer />
       </div>

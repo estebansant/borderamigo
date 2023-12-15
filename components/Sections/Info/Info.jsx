@@ -1,20 +1,79 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import passport from "@/public/assets/icons/passport.svg";
 import bullet from "@/public/assets/icons/bullet_ellipse.svg";
 import world from "@/public/assets/images/world.png";
 import { BasicRequirements } from "@/constants/BasicRequirements";
+import { motion } from "framer-motion";
 
 const Info = () => {
+  const upVar = {
+    offscreen: {
+      y: "3vh",
+      opacity: 0,
+    },
+    onscreen: {
+      y: 0,
+      scale: 1,
+      opacity: 1,
+      transition: {
+        duration: 0.7,
+        ease: "easeInOut",
+      },
+    },
+  };
+  const rightVar = {
+    offscreen: {
+      x: "-3vh",
+      opacity: 0,
+    },
+    onscreen: {
+      x: 0,
+      scale: 1,
+      opacity: 1,
+      transition: {
+        duration: 0.7,
+        ease: "easeInOut",
+      },
+    },
+  };
+  const leftVar = {
+    offscreen: {
+      x: "3vh",
+      opacity: 0,
+    },
+    onscreen: {
+      x: 0,
+      scale: 1,
+      opacity: 1,
+      transition: {
+        duration: 0.7,
+        ease: "easeInOut",
+      },
+    },
+  };
   return (
     <section className="flex-center relative h-fit w-full bg-pink px-[16px] pb-[88px]">
       <div className="mt-[175px] flex h-auto w-full max-w-[1200px] flex-col items-center justify-center gap-[50px] avg:mt-[150px] md:flex-row md:gap-[50px] lg:mt-[180px]">
         <div className="flex-column-start w-full gap-[40px] md:max-w-[440px] lg:max-w-[560px]">
-          <h2 className="title-opensans text-black">
+          <motion.h2
+            variants={upVar}
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, delay: 0.2, amount: 0.2 }}
+            className="title-opensans text-black"
+          >
             The easiest pathway to a European residence and citizenship.
-          </h2>
+          </motion.h2>
 
-          <div className="flex-column-start gap-[24px]">
+          <motion.div
+            variants={rightVar}
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, delay: 0.2, amount: 0.2 }}
+            className="flex-column-start gap-[24px]"
+          >
             <p className="paragraph text-gray">
               Spain has introduced its inaugural visa targeted specifically at
               remote workers and freelancers - the pioneering Spanish Digital
@@ -48,10 +107,16 @@ const Info = () => {
               helping you navigate needed documents, translations, apostilles,
               and every step, so you avoid the typical administrative maze.
             </p>
-          </div>
+          </motion.div>
         </div>
 
-        <article className="flex-column-start h-auto w-full gap-[58px] rounded-[24px] bg-white md:max-w-[440px] lg:max-w-[560px]">
+        <motion.article
+          variants={leftVar}
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, delay: 0.2, amount: 0.5 }}
+          className="flex-column-start h-auto w-full gap-[58px] rounded-[24px] bg-white md:max-w-[440px] lg:max-w-[560px]"
+        >
           <div className="flex-column-start gap-[16px] pl-[20px] pt-[20px]">
             <p className="small-paragraph-bold uppercase text-black">
               Welcome to
@@ -60,7 +125,7 @@ const Info = () => {
             <Image src={passport} alt="passport icon" width={36} height={36} />
           </div>
           <Image src={world} alt="world" className="h-auto w-full" />
-        </article>
+        </motion.article>
       </div>
     </section>
   );

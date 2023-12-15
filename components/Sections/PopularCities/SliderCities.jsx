@@ -8,8 +8,24 @@ import Image from "next/image";
 import Link from "next/link";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { motion } from "framer-motion";
 
 const SliderCities = () => {
+  const rightVar = {
+    offscreen: {
+      x: "-3vh",
+      opacity: 0,
+    },
+    onscreen: {
+      x: 0,
+      scale: 1,
+      opacity: 1,
+      transition: {
+        duration: 0.7,
+        ease: "easeInOut",
+      },
+    },
+  };
   const SlickArrowPrev = ({ currentSlide, slideCount, ...props }) => (
     <Image src={prevArrow} alt="prevArrow" {...props} />
   );
@@ -48,7 +64,13 @@ const SliderCities = () => {
     ],
   };
   return (
-    <div className="flex-center w-full max-w-[1200px]">
+    <motion.div
+      variants={rightVar}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, delay: 0.2, amount: 0.6 }}
+      className="flex-center w-full max-w-[1200px]"
+    >
       <Slider
         {...settings}
         className="w-[90%] border-none pl-[45px] focus:border-none avg:pl-[75px] md:pl-[50px] lg:w-full"
@@ -73,7 +95,7 @@ const SliderCities = () => {
           );
         })}
       </Slider>
-    </div>
+    </motion.div>
   );
 };
 

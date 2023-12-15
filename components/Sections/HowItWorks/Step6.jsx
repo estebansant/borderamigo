@@ -1,8 +1,31 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 
 const Step6 = () => {
+  const leftVar = {
+    offscreen: {
+      x: "3vh",
+      opacity: 0,
+    },
+    onscreen: {
+      x: 0,
+      scale: 1,
+      opacity: 1,
+      transition: {
+        duration: 0.7,
+        ease: "easeInOut",
+      },
+    },
+  };
   return (
-    <div className="relative flex h-[198px] w-full max-w-[752px] items-center justify-center gap-[24px] avg:h-auto">
+    <motion.div
+      variants={leftVar}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, delay: 0.2, amount: 0.4 }}
+      className="relative flex h-[198px] w-full max-w-[752px] items-center justify-center gap-[24px] avg:h-auto"
+    >
       <div className="flex flex-col items-center justify-center gap-[16px]">
         <div className="flex-center h-[40px] w-[40px] rounded-[100%] bg-mint">
           <p className="text-center font-OpenSans text-[1.5rem] font-semibold leading-[150%] text-white">
@@ -21,7 +44,7 @@ const Step6 = () => {
           life in Spain.
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

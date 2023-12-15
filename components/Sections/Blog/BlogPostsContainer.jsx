@@ -1,11 +1,34 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { BlogPosts } from "@/constants/BlogPosts";
+import { motion } from "framer-motion";
 
 const BlogPostsContainer = () => {
+  const leftVar = {
+    offscreen: {
+      x: "3vh",
+      opacity: 0,
+    },
+    onscreen: {
+      x: 0,
+      scale: 1,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        ease: "easeInOut",
+      },
+    },
+  };
   return (
-    <div className="flex-column-center gap-[32px] avg:flex-row">
+    <motion.div
+      variants={leftVar}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, delay: 0.2, amount: 0.6 }}
+      className="flex-column-center gap-[32px] avg:flex-row"
+    >
       {BlogPosts.map((card, i) => {
         return (
           <article
@@ -38,7 +61,7 @@ const BlogPostsContainer = () => {
           </article>
         );
       })}
-    </div>
+    </motion.div>
   );
 };
 
