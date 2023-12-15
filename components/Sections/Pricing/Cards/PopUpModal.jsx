@@ -143,8 +143,6 @@ const PopUpModal = ({ change, plan }) => {
           <form
             className="flex-column-start w-full gap-[16px]"
             onSubmit={onSubmit}
-            action="./../../../../app/api/checkout_sessions.js"
-            method="POST"
           >
             <div className="flex-column-start button-text w-full items-center gap-[8px] ">
               <Input
