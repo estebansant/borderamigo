@@ -1,11 +1,35 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import announcement from "@/public/assets/icons/announcement.svg";
+import { motion } from "framer-motion";
 
 const Announcement = () => {
+  const upVar = {
+    offscreen: {
+      y: "3vh",
+      opacity: 0,
+    },
+    onscreen: {
+      y: 0,
+      scale: 1,
+      opacity: 1,
+      transition: {
+        duration: 0.7,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
-    <div className="flex-column-center absolute bottom-[-110px] z-10 w-[92.5%] max-w-[1280px] rounded-[30px] border-[1px] border-solid border-mint bg-white p-[16px] avg:bottom-[-95px] avg:p-[20px] md:p-[32px]">
+    <motion.div
+      variants={upVar}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, delay: 0.2, amount: 0.2 }}
+      className="flex-column-center absolute bottom-[-110px] z-10 w-[92.5%] max-w-[1280px] rounded-[30px] border-[1px] border-solid border-mint bg-white p-[16px] avg:bottom-[-95px] avg:p-[20px] md:p-[32px]"
+    >
       <div className="flex-start mb-[20px] w-full gap-[16px]">
         <Image src={announcement} alt="announcement" width={32} height={32} />
         <h3 className="subtitle-petrona-bold text-mint">Announcement</h3>
@@ -24,7 +48,7 @@ const Announcement = () => {
           See the circular
         </Link>
       </p>
-    </div>
+    </motion.div>
   );
 };
 

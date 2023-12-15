@@ -2,7 +2,6 @@
 import React from "react";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { checkout } from "@/checkout";
 import { Input } from "@/components/ui/input";
 import {
   DialogDescription,
@@ -220,21 +219,7 @@ const PopUpModal = ({ change, plan }) => {
                 </ToggleGroupItem>
               </div>
             </ToggleGroup>
-            <Button
-              asChild
-              onClick={() => {
-                checkout({
-                  lineItems: [
-                    {
-                      price: "price_1OMhk5GfaGGBNJ6SOtvFhyQl",
-
-                      quantity: 1,
-                    },
-                  ],
-                });
-              }}
-              className="flex-center mt-[4px] w-full"
-            >
+            <Button asChild className="flex-center mt-[4px] w-full">
               <div className="intro-bold mb-[20px] h-[44px] bg-black text-white transition-all duration-300 hover:cursor-pointer hover:bg-mint avg:mb-0">
                 Get Started
               </div>

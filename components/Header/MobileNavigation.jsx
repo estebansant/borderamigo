@@ -6,6 +6,7 @@ import logo from "@/public/assets/icons/logo.png";
 import { HeaderLinks } from "./../../constants/HeaderLinks";
 import Image from "next/image";
 import hamburguerMenu from "./../../public/assets/icons/hamburguer_menu.svg";
+import { motion } from "framer-motion";
 
 import {
   Popover,
@@ -15,7 +16,19 @@ import {
 
 const MobileNavigation = () => {
   return (
-    <nav className="z-50 flex h-[64px] w-full items-center justify-between border-[1px] border-solid border-line p-8 md:hidden">
+    <motion.nav
+      initial={{ y: "-3vh", opacity: 0 }}
+      animate={{
+        y: 0,
+        scale: 1,
+        opacity: 1,
+        transition: {
+          duration: 0.7,
+          ease: "easeInOut",
+        },
+      }}
+      className="z-50 flex h-[64px] w-full items-center justify-between border-[1px] border-solid border-line p-8 md:hidden"
+    >
       <Link href="/">
         <Image
           src={logo}
@@ -66,7 +79,7 @@ const MobileNavigation = () => {
           </div>
         </PopoverContent>
       </Popover>
-    </nav>
+    </motion.nav>
   );
 };
 

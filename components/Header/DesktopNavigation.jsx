@@ -1,12 +1,26 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import { HeaderLinks } from "./../../constants/HeaderLinks";
 import logo from "@/public/assets/icons/logo.png";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const DesktopNavigation = () => {
   return (
-    <nav className="md:flex-between z-50 hidden w-full max-w-[1280px] gap-5 p-6 dark:shadow-none sm:px-12">
+    <motion.nav
+      initial={{ y: "-3vh", opacity: 0 }}
+      animate={{
+        y: 0,
+        scale: 1,
+        opacity: 1,
+        transition: {
+          duration: 0.7,
+          ease: "easeInOut",
+        },
+      }}
+      className="md:flex-between z-50 hidden w-full max-w-[1280px] gap-5 p-6 dark:shadow-none sm:px-12"
+    >
       <div className="flex-center">
         <Link href="/">
           <Image src={logo} alt="visa pulse" className="h-[60px] w-[180px]" />
@@ -32,7 +46,7 @@ const DesktopNavigation = () => {
           <p className="small-paragraph-semibold text-white">Get Started</p>
         </Link>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
