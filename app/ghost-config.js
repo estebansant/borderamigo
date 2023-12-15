@@ -16,3 +16,4 @@ export async function getPosts() {
       throw new Error(err);
     });
 }
+// test
