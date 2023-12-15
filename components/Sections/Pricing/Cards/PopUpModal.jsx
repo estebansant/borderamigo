@@ -2,8 +2,7 @@
 import React from "react";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-// import { checkout } from "../../../../checkout";
-// import { handler } from "@/app/api/checkout_sessions";
+import { checkout } from "@/checkout";
 import { Input } from "@/components/ui/input";
 import {
   DialogDescription,
@@ -15,30 +14,9 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import Link from "next/link";
 import logo from "@/public/assets/icons/logo_icon.png";
 import Image from "next/image";
-import { loadStripe } from "@stripe/stripe-js";
-import { useRouter } from "next/router";
-
-loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
 
 const PopUpModal = ({ change, plan }) => {
-  const router = useRouter();
-  const { success, canceled } = router.query;
-  React.useEffect(() => {
-    // Check to see if this is a redirect back from Checkout
-    // const query = new URLSearchParams(window.location.search);
-    if (success !== undefined || canceled !== undefined) {
-      if (success) {
-        console.log("Order placed! You will receive an email confirmation.");
-      }
-
-      if (canceled) {
-        console.log(
-          "Order canceled -- continue to shop around and checkout when you’re ready."
-        );
-      }
-    }
-  }, [success, canceled]);
-
+  // Handle form
   async function onSubmit(event) {
     event.preventDefault();
 
@@ -165,6 +143,8 @@ const PopUpModal = ({ change, plan }) => {
           <form
             className="flex-column-start w-full gap-[16px]"
             onSubmit={onSubmit}
+            action="./../../../../app/api/checkout_sessions.js"
+            method="POST"
           >
             <div className="flex-column-start button-text w-full items-center gap-[8px] ">
               <Input
@@ -242,10 +222,10 @@ const PopUpModal = ({ change, plan }) => {
                 </ToggleGroupItem>
               </div>
             </ToggleGroup>
-            {/* <Button
+            <Button
               asChild
               onClick={() => {
-                handler({
+                checkout({
                   lineItems: [
                     {
                       price: "price_1OMhk5GfaGGBNJ6SOtvFhyQl",
@@ -260,7 +240,7 @@ const PopUpModal = ({ change, plan }) => {
               <div className="intro-bold mb-[20px] h-[44px] bg-black text-white transition-all duration-300 hover:cursor-pointer hover:bg-mint avg:mb-0">
                 Get Started
               </div>
-            </Button> */}
+            </Button>
           </form>
         </TabsContent>
       </Tabs>
