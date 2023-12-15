@@ -43,7 +43,7 @@ const Card2 = ({ change, plan }) => {
                     Get Started
                   </div>
                 </DialogTrigger>
-                <DialogContent className="flex-column-start h-[590px] w-[90%] overflow-scroll rounded-[16px] bg-white p-[20px] avg:h-[640px] avg:w-[460px] avg:min-w-[460px] avg:overflow-hidden">
+                <DialogContent className="flex-column-start h-[590px] w-full overflow-scroll rounded-[16px] bg-white p-[20px] avg:h-[640px] avg:w-[500px] avg:min-w-[460px] avg:overflow-hidden">
                   <PopUpModal change={change} plan={plan} />
                 </DialogContent>
               </Dialog>
