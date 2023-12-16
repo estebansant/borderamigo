@@ -79,7 +79,7 @@ const Footer = () => {
 
       <div className="flex-between w-full">
         <div className="flex-center">
-          <p className="paragraph md:intro text-center text-black">
+          <p className="small-paragraph text-left text-black avg:text-center">
             ® 2023 · VisaPulse by DigitalNomadVisa Spain
           </p>
         </div>
